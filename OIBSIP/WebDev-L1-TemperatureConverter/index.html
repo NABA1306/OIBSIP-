@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <h1 class="card__title">Temperature Converter</h1>
+    <p class="card__sub">Convert between Celsius, Fahrenheit and Kelvin</p>
+
+    <form id="convert-form" class="form">
+      <label for="value" class="field-label">Value</label>
+      <input
+        type="text"
+        id="value"
+        class="field-input"
+        placeholder="e.g. 36.6"
+        autocomplete="off"
+        inputmode="decimal"
+      >
+
+      <label for="unit" class="field-label">From unit</label>
+      <select id="unit" class="field-input">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+      </select>
+
+      <button type="submit" class="btn">Convert</button>
+    </form>
+
+    <p id="error-msg" class="error" hidden></p>
+
+    <div id="results" class="results" hidden>
+      <div class="result">
+        <span class="result__label">Celsius</span>
+        <span id="out-c" class="result__value">—</span>
+      </div>
+      <div class="result">
+        <span class="result__label">Fahrenheit</span>
+        <span id="out-f" class="result__value">—</span>
+      </div>
+      <div class="result">
+        <span class="result__label">Kelvin</span>
+        <span id="out-k" class="result__value">—</span>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
